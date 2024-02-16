@@ -1,1 +1,0 @@
-{"version":3,"sources":["blocks/page-body.scss","style.css"],"names":[],"mappings":"AAAA,KACE,qBCCF","file":"style.min.css","sourcesContent":["body {\n  background-color: rgb(255, 255, 255);\n}\n","body {\n  background-color: white;\n}"]}
