@@ -1,0 +1,27 @@
+.page-header {
+  position: relative;
+
+  &--index {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.page-header--catalog::after,
+.page-header--form::after {
+  content: "";
+  position: absolute;
+  bottom: -17.5px;
+  width: 100%;
+  height: 1px;
+  background-color: $border-color;
+}
+
+.page-header__logo {
+  cursor: pointer;
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+}

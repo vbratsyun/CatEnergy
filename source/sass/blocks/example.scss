@@ -1,0 +1,124 @@
+.example {
+  background-color: $background-color;
+  padding: 25px 0 40px;
+}
+
+.example__title {
+  margin-bottom: 40px;
+}
+
+.example__description {
+  color: $text-color-grey;
+  margin: 0 0 20px;
+}
+
+.example__list {
+  display: flex;
+  column-gap: 32px;
+  width: 280px;
+  margin: 0 auto 20px;
+}
+
+.example__list-wrapper {
+  position: relative;
+  max-width: 82px;
+  padding: 14px 18px;
+  text-align: center;
+  z-index: 1;
+}
+
+.example__list-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 116px;
+  height: 56px;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  z-index: -1;
+}
+
+.example__term {
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.example__value {
+  margin: 0;
+  text-transform: lowercase;
+  font-size: 12px;
+  line-height: 12px;
+  color: $text-color-grey;
+  background: $background-color;
+}
+
+.example__price {
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.example__slider {
+  margin-bottom: 15px;
+  height: 232px;
+}
+
+.example__image {
+  margin: 0 auto;
+}
+
+.example__before-after {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+  justify-content: space-around;
+  width: 209px;
+  margin: 0 auto;
+}
+
+.example__button {
+  padding: 0;
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.example__range-scale {
+  position: relative;
+  width: 86px;
+  height: 14px;
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  background-color: $color-white;
+}
+
+.example__range-scale-control {
+  margin: 4px 6px;
+  width: 36px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: $color-button;
+}
+
+.example__range-scale-control--after {
+  position: absolute;
+  right: 0;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,98 @@
+.programs {
+  margin-bottom: 20px;
+}
+
+.programs__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.programs__item {
+  position: relative;
+  background-color: $background-color;
+  padding: 20px;
+}
+
+.programs__wrapper {
+  display: flex;
+  column-gap: 18.5px;
+}
+
+.programs__icon {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $color-button;
+  min-width: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  &--slim::before {
+    width: 36px;
+    height: 50px;
+    background: url("../../img/index/cat-slim-icon.svg") no-repeat;
+    top: -7px;
+  }
+
+  &--weight-gain::before {
+    width: 67px;
+    height: 28px;
+    background: url("../../img/index/cat-pro-icon.svg") no-repeat;
+    left: -8px;
+  }
+}
+
+.programs__title {
+  font-size: 24px;
+  line-height: 37px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.programs__description {
+  position: relative;
+  margin: 0 0 38px;
+  color: $text-color-grey;
+}
+
+.programs__description::after {
+  content: "";
+  position: absolute;
+  bottom: -23px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: $border-color;
+}
+
+.programs__link {
+  position: relative;
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $color-black;
+  font-weight: bold;
+}
+
+.programs__link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 12px;
+  margin-left: 15px;
+  background-image: url("../../img/index/arrow-icon.svg");
+}

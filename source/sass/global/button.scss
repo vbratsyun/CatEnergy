@@ -1,0 +1,15 @@
+.button {
+  display: block;
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  color: $text-color-white;
+  background-color: $color-button;
+  border: none;
+  text-transform: uppercase;
+  min-width: 280px;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &--loading {
+    background-color: $button-loading;
+  }
+}

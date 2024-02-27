@@ -1,0 +1,29 @@
+.promo {
+  text-align: center;
+  background-image: url("../../img/index/promo-image.png"),
+    linear-gradient(rgba(104, 183, 56, 0.85) 59%, rgb(255 255 255) 41%),
+    url("../../img/index/promo-background-image.jpg");
+  background-size: 280px 270px, 100%, 100%;
+  background-repeat: no-repeat;
+  background-position: top 167px center, top center, top center;
+  background-color: rgba(104, 183, 56, 0.85);
+}
+
+.promo__title {
+  line-height: 36px;
+  margin: 0 16px 25px;
+  padding-top: 27px;
+  color: $color-white;
+}
+
+.promo__slogan {
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  line-height: 36px;
+  text-transform: uppercase;
+  padding: 0 0 302px;
+  color: $color-white;
+}
+
+.promo__link {
+  padding: 8px 24px;
+}

@@ -1,1 +1,12 @@
+.page-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  color: $color-black;
+  background-color: $color-white;
+  margin: 0;
+}
 
+.page-body__page-header {
+  margin: 10px 0 17px;
+}
