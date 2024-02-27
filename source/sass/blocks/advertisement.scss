@@ -1,0 +1,32 @@
+.advertisement {
+  min-height: 290px;
+  background-image: linear-gradient(
+      rgba(104, 183, 56, 0.85),
+      rgba(104, 183, 56, 0.85)
+    ),
+    url("../../img/catalog/advertisement-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(104, 183, 56, 0.85);
+}
+
+.advertisement__icon {
+  display: block;
+  width: 70px;
+  height: 80px;
+  background-image: url("../../img/catalog/icon-gift.svg");
+  background-repeat: no-repeat;
+  position: relative;
+  top: 58px;
+  margin: 0 auto;
+}
+
+.advertisement__text {
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-color-white;
+  text-align: center;
+  width: 58%;
+  margin: 0 auto;
+  margin-top: 107px;
+}

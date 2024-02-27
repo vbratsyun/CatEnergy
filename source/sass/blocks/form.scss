@@ -1,0 +1,18 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  margin-bottom: 32px;
+}
+
+.form__button {
+  width: 100%;
+  font-weight: bold;
+  padding: 7px 0;
+  margin-bottom: 21px;
+}
+
+.form__required-fieldsets {
+  text-align: center;
+  margin: 0;
+}

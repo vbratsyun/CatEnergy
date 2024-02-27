@@ -1,0 +1,218 @@
+.fieldset {
+  position: relative;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  &--radio {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $border-color;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $border-color;
+    }
+  }
+}
+
+.fieldset__legend {
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: bold;
+  margin: 0;
+  width: 65%;
+  margin-bottom: 35px;
+}
+
+.fieldset__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding: 22px 0;
+
+  &--checkbox {
+    padding: 0;
+  }
+}
+
+.fieldset__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 13px;
+}
+
+.fieldset__container {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+}
+
+.fieldset__label {
+  display: block;
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  min-width: max-content;
+  color: $text-color-grey;
+
+  &--radio {
+    margin-left: 50px;
+    padding: 6px 0;
+  }
+
+  &--checkbox {
+    margin-left: 46px;
+    padding: 6px 0;
+  }
+}
+
+.fieldset__input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: none;
+  outline: 1px solid $input-outline;
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $text-color-grey;
+
+  &:hover {
+    outline-color: $input-outline-hover;
+  }
+
+  &:focus {
+    outline-color: $input-outline-focus;
+  }
+
+  &--error {
+    outline-color: $input-outline-error;
+  }
+}
+
+.fieldset__input:focus + .fieldset__icon > svg {
+  fill: $color-button;
+}
+
+.fieldset__input--email:focus + .fieldset__icon > svg {
+  stroke: $color-button;
+  fill: none;
+}
+
+.fieldset__control {
+  position: relative;
+  cursor: pointer;
+}
+
+.fieldset__mark {
+  position: absolute;
+  top: 0;
+  display: block;
+  box-sizing: border-box;
+
+  &--radio {
+    width: 30px;
+    height: 30px;
+    outline: 1px solid $radio-outline-button;
+    border-radius: 50%;
+
+    &::before {
+      display: none;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $color-button;
+      outline: 1px solid transparent;
+    }
+  }
+
+  &--checkbox {
+    width: 30px;
+    height: 30px;
+    outline: 1px solid $border-color;
+
+    &::before {
+      display: none;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 18px;
+      height: 14px;
+      background: url("../../img/form/arrow.svg") no-repeat;
+    }
+  }
+}
+
+.fieldset__inner {
+  width: 100%;
+  position: relative;
+}
+
+.fieldset__icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+
+.fieldset__textarea {
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $text-color-grey;
+  padding: 9px 12px;
+}
+
+.fieldset__input:hover + .fieldset__mark--radio,
+.fieldset__input:hover + .fieldset__mark--checkbox {
+  outline-color: $radio-outline-button-hover;
+}
+
+.fieldset__input:focus + .fieldset__mark--radio,
+.fieldset__input:focus + .fieldset__mark--checkbox {
+  outline-color: $radio-outline-button-focus;
+}
+
+.fieldset__input:focus + .fieldset__mark--radio::before {
+  display: block;
+}
+
+.fieldset__input:checked + .fieldset__mark--radio::before,
+.fieldset__input:checked + .fieldset__mark--checkbox::before {
+  display: block;
+}
+
+.fieldset__input:disabled + .fieldset__mark--radio,
+.fieldset__input:disabled ~ .fieldset__label--radio,
+.fieldset__input:disabled + .fieldset__mark--checkbox,
+.fieldset__input:disabled + .fieldset__label--checkbox {
+  outline-color: $radio-outline-button-hover;
+  opacity: 0.3;
+}

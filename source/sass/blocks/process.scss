@@ -1,0 +1,61 @@
+.process__title {
+  margin: 0 auto 40px;
+}
+
+.process__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.process__item {
+  display: flex;
+  column-gap: 20px;
+}
+
+.process__icon {
+  position: relative;
+  min-width: 60px;
+  width: 60px;
+  height: 60px;
+  background-color: $color-button;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &--leaf::before {
+    width: 31px;
+    height: 32px;
+    background: url("../../img/index/leaf-icon.svg") no-repeat;
+  }
+
+  &--tub::before {
+    width: 30px;
+    height: 31px;
+    background: url("../../img/index/tub-icon.svg") no-repeat;
+  }
+
+  &--eat::before {
+    width: 26px;
+    height: 30px;
+    background: url("../../img/index/eat-icon.svg") no-repeat;
+  }
+
+  &--alarm::before {
+    width: 33px;
+    height: 33px;
+    background: url("../../img/index/alarm-icon.svg") no-repeat;
+  }
+}
+
+.process__text {
+  color: $text-color-grey;
+  margin: 0;
+}
