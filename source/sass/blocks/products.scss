@@ -6,5 +6,41 @@
     line-height: 24px;
     padding: 25px 0 36px;
     margin: 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+      padding: 0;
+      margin-bottom: 80px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 82px;
+  }
+}
+
+.products__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    column-gap: 79px;
+  }
+}
+
+.products__additional {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.products__products-list {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 68px;
   }
 }

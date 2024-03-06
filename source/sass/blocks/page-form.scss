@@ -1,5 +1,13 @@
 .page-form__title {
   margin: 27px 0 37px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 56px;
+  }
 }
 
 .page-form__text {
@@ -9,4 +17,15 @@
   font-weight: bold;
   margin: 0;
   margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    width: 60%;
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 323px;
+  }
 }

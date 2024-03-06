@@ -1,3 +1,27 @@
 .wrapper {
   margin: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 30px;
+
+    &--form {
+      padding: 0 39px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 110px;
+
+    &--form {
+      padding: 0;
+    }
+
+    &--form-personality {
+      margin-right: 0;
+    }
+
+    &--form-radio {
+      margin-left: 0;
+    }
+  }
 }
