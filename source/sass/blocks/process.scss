@@ -1,16 +1,60 @@
 .process__title {
   margin: 0 auto 40px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto 32px;
+  }
 }
 
 .process__list {
   display: flex;
   flex-direction: column;
   row-gap: 24px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 37px 137px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 37px 137px;
+  }
 }
 
 .process__item {
+  position: relative;
   display: flex;
   column-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    row-gap: 31px;
+    width: 92%;
+    padding: 21px 0 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 122%;
+  }
+}
+
+.process__number {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 118px;
+    font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+    font-size: 280px;
+    line-height: 260px;
+    font-weight: bold;
+    color: $background-color;
+    z-index: -1;
+  }
 }
 
 .process__icon {
@@ -53,9 +97,20 @@
     height: 33px;
     background: url("../../img/index/alarm-icon.svg") no-repeat;
   }
+
+  @media (min-width: $tablet-width) {
+    min-width: 80px;
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .process__text {
   color: $text-color-grey;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

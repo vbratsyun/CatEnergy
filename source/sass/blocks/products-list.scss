@@ -1,6 +1,18 @@
 .products-list {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 324px);
+    gap: 60px;
+    justify-content: space-evenly;
+    margin: 0 30px 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(auto-fit, 245px);
+  }
 }
 
 .products-list__item {
@@ -18,6 +30,15 @@
     width: 100%;
     height: 1px;
     background-color: $border-color;
+
+    @media (min-width: $tablet-width) {
+      content: none;
+    }
+  }
+
+  &--show-more {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
   &:last-child::after {
@@ -27,18 +48,58 @@
     width: 100%;
     height: 1px;
     background-color: $border-color;
+
+    @media (min-width: $tablet-width) {
+      bottom: 0;
+      width: 324px;
+      height: 82%;
+      outline: 2px solid $background-color;
+      background-color: transparent;
+      z-index: -1;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 245px;
+    }
   }
 
-  &--show-more {
-    grid-template-columns: 1fr;
-    text-align: center;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 82%;
+      background-color: $background-color;
+      z-index: -1;
+    }
   }
 }
 
-.products-list__image {
+.products-list__picture {
   grid-column: 2/3;
   grid-row: 1/3;
   margin: 0 auto;
+}
+
+.products-list__image {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    height: 200px;
+
+    &--small {
+      height: 174px;
+    }
+
+    &--large {
+      height: 207px;
+    }
+  }
 }
 
 .products-list__title {
@@ -52,38 +113,95 @@
   margin: 0;
   max-width: 51%;
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 auto;
+    width: 35%;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 63%;
+    max-width: none;
+  }
+
   &--show-more {
     max-width: 100%;
     margin-bottom: 8px;
+
+    @media (min-width: $tablet-width) {
+      width: 134px;
+      line-height: 22px;
+      margin-bottom: 23px;
+    }
   }
+}
+
+.products-list__compound,
+.products-list__value {
+  margin: 0;
 }
 
 .products-list__compound {
   grid-column: 3/4;
   grid-row: 2/3;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  font-size: 12px;
-  line-height: 16px;
-  color: $text-color-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 247px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 168px;
+  }
 }
 
-.products-list__compound,
-.products-list__price {
-  margin: 0;
-}
+.products-list__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 
-.products-list__price {
-  text-align: right;
+  @media (min-width: $tablet-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -9px;
+      width: 100%;
+      height: 1px;
+      background-color: $border-color;
+    }
+  }
 }
 
 .products-list__button {
-  grid-column: 1/-1;
+  grid-column: 2/-2;
   padding: 10px 0;
+
+  @media (min-width: $tablet-width) {
+    width: 247px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 168px;
+  }
 
   &--loading {
     color: $text-color-grey;
     font-weight: 600;
+    margin: 0 20px;
+
+    @media (min-width: $tablet-width) {
+      width: 247px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 168px;
+    }
   }
 }
 
@@ -94,6 +212,13 @@
   height: 30px;
   margin: 0 auto;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    margin-bottom: 27px; //??
+  }
 }
 
 .products-list__description {
@@ -101,4 +226,11 @@
   line-height: 16px;
   color: $text-color-grey;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+    width: 167px;
+    margin-bottom: 87px;
+  }
 }

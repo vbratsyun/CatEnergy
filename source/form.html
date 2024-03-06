@@ -8,32 +8,48 @@
   </head>
 
   <body class="page__body page-body">
-    <header class="page-body__page-header page-header page-header--form">
+    <header
+      class="page-body__page-header page-header page-body__page-header--form"
+    >
       <div class="wrapper page-header__wrapper">
         <a class="page-header__logo" href="index.html">
-          <img
-            class="page-header__logo-image"
-            src="img/header-logo.svg"
-            width="191"
-            height="38"
-            alt="Логотип интернет-магазина 'Cat Energy'."
-          />
+          <picture>
+            <source
+              media="(min-width:1440px)"
+              srcset="img/header-logo-desktop.svg"
+              width="202"
+              height="59"
+            />
+            <source
+              media="(min-width:768px)"
+              srcset="img/header-logo-tablet.svg"
+              width="174"
+              height="52"
+            />
+            <img
+              class="page-header__logo-image"
+              src="img/header-logo.svg"
+              width="191"
+              height="38"
+              alt="Логотип интернет-магазина 'Cat Energy'."
+            />
+          </picture>
         </a>
         <nav class="page-header__page-nav page-nav">
           <button class="page-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <ul class="page-nav__list nav-list">
+          <ul class="page-nav__list nav-list list">
             <li class="nav-list__item">
-              <a class="nav-list__link" href="index.html">Главная</a>
+              <a class="nav-list__link link" href="index.html">Главная</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link" href="catalog.html"
+              <a class="nav-list__link link" href="catalog.html"
                 >Каталог продукции</a
               >
             </li>
             <li class="nav-list__item nav-list__item--current">
-              <a class="nav-list__link">Подбор программы</a>
+              <a class="nav-list__link link">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -43,7 +59,7 @@
       <h1 class="visually-hidden">
         Страница по подбору программы питания для вашего питомца
       </h1>
-      <div class="wrapper">
+      <div class="wrapper wrapper--form">
         <h2 class="page-form__title title">Подбор программы</h2>
         <p class="page-form__text">
           Заполните анкету, и мы подберем программу питания для вашего кота
@@ -55,28 +71,40 @@
         method="post"
       >
         <fieldset class="form__fieldset fieldset">
-          <div class="wrapper fieldset__wrapper">
-            <legend class="visually-hidden">Представьтесь</legend>
+          <legend class="visually-hidden">Представьтесь</legend>
+          <div
+            class="fieldset__wrapper wrapper wrapper--form wrapper--form-personality"
+          >
             <div class="fieldset__container">
-              <label class="fieldset__label" for="name">Имя:*</label>
+              <label class="fieldset__label fieldset__label--name" for="name"
+                >Имя:*</label
+              >
               <input
                 class="fieldset__input"
                 id="name"
                 type="text"
                 placeholder="Барсик"
+                required
               />
             </div>
             <div class="fieldset__container">
-              <label class="fieldset__label" for="weight">Вес (кг):*</label>
+              <label
+                class="fieldset__label fieldset__label--weight"
+                for="weight"
+                >Вес (кг):*</label
+              >
               <input
                 class="fieldset__input"
                 id="weight"
                 type="text"
                 placeholder="7"
+                required
               />
             </div>
             <div class="fieldset__container">
-              <label class="fieldset__label" for="years">Возраст (лет):</label>
+              <label class="fieldset__label fieldset__label--years" for="years"
+                >Возраст (лет):</label
+              >
               <input
                 class="fieldset__input"
                 id="years"
@@ -87,8 +115,8 @@
           </div>
         </fieldset>
         <fieldset class="form__fieldset fieldset fieldset--radio">
-          <div class="wrapper">
-            <legend class="visually-hidden">Цель</legend>
+          <legend class="visually-hidden">Цель</legend>
+          <div class="wrapper wrapper--form wrapper--form-radio">
             <ul class="fieldset__list list">
               <li class="fieldset__item">
                 <label class="fieldset__control">
@@ -136,20 +164,26 @@
             </ul>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset fieldset">
-          <div class="wrapper">
-            <legend class="fieldset__legend">
-              Контактные данные (владельца кота)
-            </legend>
-            <div class="fieldset__wrapper">
+
+        <fieldset class="form__fieldset fieldset fieldset--contacts">
+          <legend class="fieldset__legend wrapper wrapper--form">
+            Контактные данные (владельца кота)
+          </legend>
+          <div class="wrapper wrapper--form">
+            <div class="fieldset__wrapper fieldset__wrapper--contacts">
               <div class="fieldset__container">
-                <label class="fieldset__label" for="email">E-mail:*</label>
+                <label
+                  class="fieldset__label fieldset__label--email"
+                  for="email"
+                  >E-mail:*</label
+                >
                 <div class="fieldset__inner">
                   <input
                     class="fieldset__input fieldset__input--email"
                     id="email"
                     type="email"
                     placeholder="kuklachev@gmail.com"
+                    required
                   />
                   <span class="fieldset__icon">
                     <svg
@@ -191,13 +225,16 @@
                 </div>
               </div>
               <div class="fieldset__container">
-                <label class="fieldset__label" for="tel">Телефон:*</label>
+                <label class="fieldset__label fieldset__label--tel" for="tel"
+                  >Телефон:*</label
+                >
                 <div class="fieldset__inner">
                   <input
                     class="fieldset__input"
                     id="tel"
                     type="tel"
                     placeholder="8 (960) 900-60-90"
+                    required
                   />
                   <span class="fieldset__icon">
                     <svg
@@ -231,9 +268,11 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset fieldset">
-          <div class="wrapper">
-            <legend class="fieldset__legend">Комментарий</legend>
+        <fieldset class="form__fieldset fieldset fieldset--comments">
+          <legend class="fieldset__legend wrapper wrapper--form">
+            Комментарий
+          </legend>
+          <div class="wrapper wrapper--form">
             <textarea
               class="fieldset__input fieldset__textarea"
               name="comment"
@@ -243,9 +282,13 @@
             ></textarea>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset fieldset">
-          <div class="wrapper">
-            <legend class="fieldset__legend">Дополнительно</legend>
+        <fieldset class="form__fieldset fieldset fieldset--additionally">
+          <legend
+            class="fieldset__legend fieldset__legend--additionally wrapper wrapper--form"
+          >
+            Дополнительно
+          </legend>
+          <div class="wrapper wrapper--form">
             <ul class="fieldset__list list fieldset__list--checkbox">
               <li class="fieldset__item">
                 <label class="fieldset__control">
@@ -303,11 +346,11 @@
             </ul>
           </div>
         </fieldset>
-        <div class="wrapper">
+        <div class="form__wrapper wrapper wrapper--form">
           <button class="form__button button" type="submit">
             Отправить заявку
           </button>
-          <p class="form__required-fieldsets">* — Обязательные поля</p>
+          <p class="form__required-fieldset">* — Обязательные поля</p>
         </div>
       </form>
     </main>
@@ -318,10 +361,9 @@
           <p class="contacts__text">
             Приглашаем <br />к сотрудничеству дилеров!
           </p>
-          <address>
-            <p class="contacts__address">
-              ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-            </p>
+          <address class="contacts__wrapper-address">
+            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8</p>
+            <p class="contacts__city">Санкт-Петербург</p>
           </address>
         </div>
         <div class="contacts__container">
@@ -343,8 +385,8 @@
           />
         </div>
         <div class="contacts__social-contacts">
-          <div class="wrapper">
-            <a class="contacts__social-contacts-link" href="index.html">
+          <div class="contacts__wrapper-social-contacts wrapper">
+            <a class="contacts__social-contacts-link">
               <img
                 src="img/footer-logo.svg"
                 width="128"
