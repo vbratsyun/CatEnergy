@@ -9,7 +9,7 @@
 
 .page-body__page-header {
   position: relative;
-  margin: 10px 0 17px;
+  min-height: 64px;
 
   @media (min-width: $tablet-width) {
     margin: 25px 0 64px;

@@ -1,13 +1,43 @@
 .page-header {
   &--index {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 30px;
+
+    &--index {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 110px;
   }
 }
 
 .page-header__logo {
+  padding: 10px 0 17px;
   cursor: pointer;
+}
+
+.page-header__logo-image {
+  display: block;
+  width: 191px;
+  height: 37px;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
 }
 
 .page-header__wrapper {
