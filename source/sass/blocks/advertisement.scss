@@ -9,6 +9,14 @@
   background-repeat: no-repeat;
   background-color: rgba(104, 183, 56, 0.85);
 
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(104, 183, 56, 0.85),
+        rgba(104, 183, 56, 0.85)
+      ),
+      url("../../img/catalog/advertisement-background@2x.jpg");
+  }
+
   @media (min-width: $tablet-width) {
     min-height: 200px;
     background-image: linear-gradient(
@@ -16,6 +24,14 @@
         rgba(104, 183, 56, 0.85)
       ),
       url("../../img/catalog/advertisement-background-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(104, 183, 56, 0.85),
+          rgba(104, 183, 56, 0.85)
+        ),
+        url("../../img/catalog/advertisement-background-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -25,7 +41,14 @@
         rgba(104, 183, 56, 0.85)
       ),
       url("../../img/catalog/advertisement-background-desktop.jpg");
-    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(104, 183, 56, 0.85),
+          rgba(104, 183, 56, 0.85)
+        ),
+        url("../../img/catalog/advertisement-background-desktop@2x.jpg");
+    }
   }
 }
 
