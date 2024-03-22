@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cat Energy</title>
     <link href="css/style.min.css" rel="stylesheet" />
+    <link rel="reload" href="css/style.min.css" as="style" />
+    <link rel="reload" href="js/script.js" as="script" />
+    <link
+      rel="preload"
+      href="fonts/Oswald.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
   </head>
 
   <body class="page__body page-body">
@@ -77,10 +86,11 @@
                 >Имя:*</label
               >
               <input
-                class="fieldset__input"
+                class="fieldset__input fieldset__input--name"
                 id="name"
                 type="text"
                 placeholder="Барсик"
+                autocomplete="on"
                 required
               />
             </div>
@@ -95,6 +105,7 @@
                 id="weight"
                 type="text"
                 placeholder="7"
+                autocomplete="on"
                 required
               />
             </div>
@@ -180,16 +191,21 @@
                     id="email"
                     type="email"
                     placeholder="kuklachev@gmail.com"
+                    autocomplete="on"
                     required
                   />
                   <span class="fieldset__icon">
                     <svg
+                      class="fieldset__icon-email"
                       width="19"
                       height="14"
                       viewBox="0 0 19 14"
                       fill="none"
                       stroke="#222222"
                       xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      focusable="false"
+                      aria-hidden="true"
                     >
                       <line
                         x1="0.65"
@@ -231,15 +247,20 @@
                     id="tel"
                     type="tel"
                     placeholder="8 (960) 900-60-90"
+                    autocomplete="on"
                     required
                   />
                   <span class="fieldset__icon">
                     <svg
+                      class="fieldset__icon-tel"
                       width="20"
                       height="21"
                       viewBox="0 0 20 21"
                       fill="#000"
                       xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      focusable="false"
+                      aria-hidden="true"
                     >
                       <g clip-path="url(#clip0_153_253)">
                         <path
@@ -432,8 +453,18 @@
             </a>
             <ul class="contacts__social-contacts-list social list">
               <li class="social__item">
-                <a class="social__link" href="https://vk.com/htmlacademy">
-                  <svg width="28" height="18">
+                <a
+                  class="social__link"
+                  href="https://vk.com/htmlacademy?ysclid=ltym13yn2h972529714"
+                >
+                  <svg
+                    class="social__link-icon social__link-icon--vk"
+                    width="23"
+                    height="16"
+                    role="img"
+                    focusable="false"
+                    aria-hidden="true"
+                  >
                     <use xlink:href="img/sprite.svg#social-icon-vk"></use>
                   </svg>
                   <span class="visually-hidden">Мы в Вконтакте</span>
@@ -444,15 +475,29 @@
                   class="social__link"
                   href="http://www.instagrem.com/htmlacademy/"
                 >
-                  <svg width="20" height="20">
-                    <use xlink:href="img/sprite.svg#social-icon-insg"></use>
+                  <svg
+                    class="social__link-icon social__link-icon--inst"
+                    width="16"
+                    height="16"
+                    role="img"
+                    focusable="false"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="img/sprite.svg#social-icon-inst"></use>
                   </svg>
                   <span class="visually-hidden">Мы в Инстаграме</span>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link" href="http://facebook.com/htmlacademy">
-                  <svg width="13" height="20">
+                  <svg
+                    class="social__link-icon social__link-icon--fc"
+                    width="22"
+                    height="22"
+                    role="img"
+                    focusable="false"
+                    aria-hidden="true"
+                  >
                     <use xlink:href="img/sprite.svg#social-icon-fc"></use>
                   </svg>
                   <span class="visually-hidden">Мы в Фейсбуке</span>
@@ -464,19 +509,34 @@
                 class="copyright__link link"
                 href="https://htmlacademy.ru/intensive/adaptive"
               >
-                <svg width="113" height="16">
+                <svg
+                  class="copyright__link-text"
+                  width="113"
+                  height="16"
+                  role="img"
+                  focusable="false"
+                  aria-hidden="true"
+                >
                   <use xlink:href="img/sprite.svg#htmlacademy-text"></use>
                 </svg>
 
-                <svg width="27" height="34">
+                <svg
+                  class="copyright__link-icon"
+                  width="27"
+                  height="34"
+                  role="img"
+                  focusable="false"
+                  aria-hidden="true"
+                >
                   <use xlink:href="img/sprite.svg#htmlacademy-icon"></use>
                 </svg>
+                <span class="visually-hidden">Сайт HTMLAcademy</span>
               </a>
             </div>
           </div>
         </div>
       </section>
-      <script src="js/script.js"></script>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

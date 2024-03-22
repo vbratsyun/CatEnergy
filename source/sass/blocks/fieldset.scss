@@ -158,8 +158,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    // padding: 0;
-
     &--checkbox {
       grid-template-columns: repeat(4, 1fr);
       column-gap: 104px;
@@ -296,11 +294,11 @@
   }
 
   &:focus {
-    outline-color: $input-outline-focus;
+    outline: 2px solid $input-outline-focus;
   }
 
   &--error {
-    outline-color: $input-outline-error;
+    outline: 2px solid $input-outline-error;
   }
 
   @media (min-width: $tablet-width) {
@@ -313,11 +311,12 @@
   }
 }
 
-.fieldset__input:focus + .fieldset__icon > svg {
+.fieldset__input:focus + .fieldset__icon > .fieldset__icon-email,
+.fieldset__input:focus + .fieldset__icon > .fieldset__icon-tel {
   fill: $color-button;
 }
 
-.fieldset__input--email:focus + .fieldset__icon > svg {
+.fieldset__input--email:focus + .fieldset__icon > .fieldset__icon-email {
   stroke: $color-button;
   fill: none;
 }

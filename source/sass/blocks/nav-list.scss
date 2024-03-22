@@ -1,6 +1,4 @@
 .nav-list {
-  // display: none;
-
   @media (min-width: $tablet-width) {
     display: flex;
     column-gap: 36px;
@@ -50,10 +48,29 @@
   text-transform: uppercase;
   font-weight: bold;
   color: $color-black;
+  cursor: default;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.6;
+    cursor: pointer;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
+
+    &--current:hover,
+    &--current:active,
+    &--current-index:hover,
+    &--current-index:active {
+      opacity: 1;
+      cursor: default;
+    }
 
     &--current::after,
     &--current-index::after {
