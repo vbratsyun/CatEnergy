@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   column-gap: 36px;
+  align-items: center;
   justify-content: space-evenly;
 
   &::before {
@@ -33,4 +34,32 @@
       content: none;
     }
   }
+}
+
+.social__link-icon {
+  @media (min-width: $tablet-width) {
+    &--vk {
+      width: 29px;
+      height: 17px;
+    }
+
+    &--inst {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fc {
+      width: 13px;
+      height: 27px;
+    }
+  }
+}
+
+.social__link:hover .social__link-icon {
+  stroke: $color-button;
+}
+
+.social__link:active .social__link-icon {
+  stroke: $color-button;
+  opacity: 0.6;
 }

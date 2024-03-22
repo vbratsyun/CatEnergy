@@ -9,7 +9,23 @@
   cursor: pointer;
   box-sizing: border-box;
 
+  &:hover {
+    background-color: $color-button-hover;
+  }
+
+  &:active {
+    color: rgba($text-color-white, 0.3);
+  }
+
   &--loading {
     background-color: $button-loading;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba($text-color-grey, 0.3);
+    }
   }
 }

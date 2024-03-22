@@ -174,7 +174,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 32px;
+    width: 24px;
     height: 12px;
     margin-left: 15px;
     background-image: url("../../img/index/arrow-icon.svg");
@@ -186,6 +186,16 @@
     @media (min-width: $desktop-width) {
       margin-left: 29px;
     }
+  }
+
+  &:hover::after {
+    content: "";
+    width: 32px;
+    background-image: url("../../img/index/arrow-icon-hover.svg");
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 
   @media (min-width: $tablet-width) {

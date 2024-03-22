@@ -260,17 +260,29 @@
   font-weight: 600;
   text-transform: uppercase;
   background-color: transparent;
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
+
+  &--before {
+    order: 1;
+  }
+
+  &--after {
+    order: 3;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 29px;
+    border-bottom: 1px dotted $border-color;
+  }
+
+  &:hover {
     border-bottom: 1px solid $border-color;
   }
 
-  @media (min-width: $desktop-width) {
-    border-bottom: 1px dotted $border-color;
+  &:active {
+    border-bottom: 1px solid transparent;
   }
 }
 
@@ -281,6 +293,7 @@
   border: 1px solid $border-color;
   border-radius: 10px;
   background-color: $color-white;
+  order: 2;
 
   @media (min-width: $tablet-width) {
     width: 426px;
@@ -300,7 +313,6 @@
   @media (min-width: $tablet-width) {
     position: absolute;
     top: 0;
-    // right: 0;
     bottom: 0;
     left: 0;
     margin: auto;
@@ -342,4 +354,16 @@
 
 .hidden {
   display: none;
+}
+
+.example__button:hover ~ .example__range-scale .example__range-scale-control {
+  @media (min-width: $tablet-width) {
+    box-shadow: 0 1px 3px 2px $border-color;
+  }
+}
+
+.example__button:active ~ .example__range-scale .example__range-scale-control {
+  @media (min-width: $tablet-width) {
+    border: 1px solid $color-button;
+  }
 }

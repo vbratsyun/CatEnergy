@@ -9,3 +9,12 @@
     column-gap: 22px;
   }
 }
+
+.copyright__link:hover .copyright__link-icon {
+  stroke: $color-button;
+}
+
+.copyright__link:active .copyright__link-icon,
+.copyright__link:active .copyright__link-text {
+  opacity: 0.6;
+}
