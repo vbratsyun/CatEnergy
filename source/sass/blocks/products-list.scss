@@ -68,7 +68,6 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
 
     &::after {
       content: "";
@@ -86,6 +85,12 @@
   grid-column: 2/3;
   grid-row: 1/3;
   margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+
+  @media (min-width: $tablet-width) {
+    height: 200px;
+  }
 }
 
 .products-list__image {
@@ -217,10 +222,15 @@
 
   @media (min-width: $tablet-width) {
     width: 60px;
-    height: 60px;
+    height: 200px;
     background-size: contain;
-    margin-bottom: 27px; //??
+    background-position: center bottom;
   }
+}
+
+.products-list__text {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .products-list__description {

@@ -24,14 +24,14 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 296px;
     column-gap: 20px;
-    padding: 77px 0 57px 52px;
+    padding: 77px 52px 57px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 100px 1fr;
     column-gap: 62px;
     align-items: center;
-    padding: 55px 0 41px 52px;
+    padding: 55px 52px 41px;
   }
 }
 
@@ -168,6 +168,7 @@
   color: $color-black;
   font-weight: bold;
   grid-column: 1/-1;
+  max-width: 87px;
 
   &::after {
     content: "";
@@ -176,11 +177,12 @@
     transform: translateY(-50%);
     width: 24px;
     height: 12px;
-    margin-left: 15px;
+    left: 93px;
     background-image: url("../../img/index/arrow-icon.svg");
 
     @media (min-width: $tablet-width) {
       margin-left: 25px;
+      max-width: 119px;
     }
 
     @media (min-width: $desktop-width) {
@@ -202,6 +204,7 @@
     grid-column: 1/2;
     font-size: 20px;
     line-height: 29px;
+    max-width: 119px;
   }
 
   @media (min-width: $desktop-width) {

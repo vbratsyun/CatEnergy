@@ -3,7 +3,9 @@
   display: flex;
   column-gap: 36px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 280px;
 
   &::before {
     content: "";
@@ -33,6 +35,10 @@
     @media (min-width: $tablet-width) {
       content: none;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: start;
   }
 }
 

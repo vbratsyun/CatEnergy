@@ -92,19 +92,21 @@
   line-height: 20px;
   color: $text-color-white;
   text-align: center;
-  width: 58%;
+  width: 65%;
   margin: 0 auto;
   margin-top: 107px;
+  padding: 10px;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    width: 32%;
+    width: 36%;
     text-align: left;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0 auto;
-    width: 161px;
+    width: 181px;
     text-align: center;
   }
 }

@@ -4,9 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cat Energy</title>
+    <!-- 16×16 -->
+    <link rel="icon" href="favicon.ico" />
+    <!-- 32×32 -->
+    <link rel="icon" href="img/icon.svg" type="image/svg+xml" />
+    <!-- 180×180 -->
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link href="css/style.min.css" rel="stylesheet" />
-    <link rel="reload" href="css/style.min.css" as="style" />
-    <link rel="reload" href="js/script.js" as="script" />
+    <link rel="preload" href="css/style.min.css" as="style" />
+    <link rel="preload" href="js/script.js" as="script" />
     <link
       rel="preload"
       href="fonts/Oswald.woff2"
@@ -16,8 +23,8 @@
     />
   </head>
 
-  <body class="page__body page-body">
-    <header class="page-body__page-header page-header page-header--index">
+  <body class="page__page-body page-body">
+    <header class="page-body__page-header page-header">
       <a class="page-header__logo wrapper" href="index.html">
         <picture>
           <source
@@ -82,11 +89,9 @@
             class="fieldset__wrapper wrapper wrapper--form wrapper--form-personality"
           >
             <div class="fieldset__container">
-              <label class="fieldset__label fieldset__label--name" for="name"
-                >Имя:*</label
-              >
+              <label class="fieldset__label" for="name">Имя:*</label>
               <input
-                class="fieldset__input fieldset__input--name"
+                class="fieldset__input"
                 id="name"
                 type="text"
                 placeholder="Барсик"
@@ -95,11 +100,7 @@
               />
             </div>
             <div class="fieldset__container">
-              <label
-                class="fieldset__label fieldset__label--weight"
-                for="weight"
-                >Вес (кг):*</label
-              >
+              <label class="fieldset__label" for="weight">Вес (кг):*</label>
               <input
                 class="fieldset__input"
                 id="weight"
@@ -110,9 +111,7 @@
               />
             </div>
             <div class="fieldset__container">
-              <label class="fieldset__label fieldset__label--years" for="years"
-                >Возраст (лет):</label
-              >
+              <label class="fieldset__label" for="years">Возраст (лет):</label>
               <input
                 class="fieldset__input"
                 id="years"
@@ -180,14 +179,10 @@
           <div class="wrapper wrapper--form">
             <div class="fieldset__wrapper fieldset__wrapper--contacts">
               <div class="fieldset__container">
-                <label
-                  class="fieldset__label fieldset__label--email"
-                  for="email"
-                  >E-mail:*</label
-                >
+                <label class="fieldset__label" for="email">E-mail:*</label>
                 <div class="fieldset__inner">
                   <input
-                    class="fieldset__input fieldset__input--email"
+                    class="fieldset__input"
                     id="email"
                     type="email"
                     placeholder="kuklachev@gmail.com"
@@ -238,9 +233,7 @@
                 </div>
               </div>
               <div class="fieldset__container">
-                <label class="fieldset__label fieldset__label--tel" for="tel"
-                  >Телефон:*</label
-                >
+                <label class="fieldset__label" for="tel">Телефон:*</label>
                 <div class="fieldset__inner">
                   <input
                     class="fieldset__input"

@@ -4,7 +4,10 @@
   min-height: 100%;
   color: $color-black;
   background-color: $color-white;
-  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+  }
 }
 
 .page-body__page-header {
@@ -17,6 +20,10 @@
 
   @media (min-width: $desktop-width) {
     margin: 53px 0 111px;
+
+    &--index {
+      margin-top: 0;
+    }
   }
 }
 

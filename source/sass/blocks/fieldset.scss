@@ -184,9 +184,16 @@
 }
 
 .fieldset__container {
-  display: flex;
+  // display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
   column-gap: 13px;
+  // flex-wrap: wrap;
+
+  // @media (min-width: $desktop-width) {
+  //   flex-wrap: nowrap;
+  // }
 }
 
 .fieldset__label {
@@ -195,66 +202,6 @@
   text-transform: uppercase;
   font-weight: bold;
   color: $text-color-grey;
-
-  &--name {
-    width: 14%;
-
-    @media (min-width: $tablet-width) {
-      width: 8%;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 7%;
-    }
-  }
-
-  &--weight {
-    width: 26%;
-
-    @media (min-width: $tablet-width) {
-      width: 14%;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 15%;
-    }
-  }
-
-  &--years {
-    width: 50%;
-
-    @media (min-width: $tablet-width) {
-      width: 24%;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 27%;
-    }
-  }
-
-  &--email {
-    width: 20%;
-
-    @media (min-width: $tablet-width) {
-      width: 11%;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 12%;
-    }
-  }
-
-  &--tel {
-    width: 22%;
-
-    @media (min-width: $tablet-width) {
-      width: 15%;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 14%;
-    }
-  }
 
   &--radio {
     margin-left: 50px;
@@ -280,6 +227,7 @@
 
 .fieldset__input {
   width: 100%;
+  min-width: 163px;
   box-sizing: border-box;
   padding: 13px 50px 13px 14px;
   border: none;
@@ -304,6 +252,7 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    min-width: 350px;
   }
 
   @media (min-width: $desktop-width) {
@@ -327,6 +276,7 @@
   align-items: center;
   min-height: 30px;
   cursor: pointer;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
     min-height: 40px;
@@ -411,9 +361,8 @@
 
 .fieldset__icon {
   position: absolute;
-  top: 50%;
+  top: 20px;
   right: 16px;
-  transform: translateY(-50%);
 }
 
 .fieldset__textarea {
