@@ -4,9 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cat Energy</title>
+    <link rel="icon" href="favicon.ico" />
+    <!-- 32×32 -->
+    <link rel="icon" href="img/icon.svg" type="image/svg+xml" />
+    <!-- 180×180 -->
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link href="css/style.min.css" rel="stylesheet" />
-    <link rel="reload" href="css/style.min.css" as="style" />
-    <link rel="reload" href="js/script.js" as="script" />
+    <link rel="preload" href="css/style.min.css" as="style" />
+    <link rel="preload" href="js/script.js" as="script" />
     <link
       rel="preload"
       href="fonts/Oswald.woff2"
@@ -75,6 +81,7 @@
       <section class="page-main__promo promo">
         <h2 class="promo__title title">Функциональное питания для котов</h2>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
+
         <div class="wrapper">
           <a class="promo__link button link" href="form.html"
             >Подобрать программу</a
@@ -179,59 +186,69 @@
 
           <div class="example__container-slider">
             <div class="example__slider">
-              <div class="wrapper">
+              <div class="wrapper wrapper--slider">
                 <picture>
-                  <!-- Доработать слайдер -->
                   <source
                     type="image/webp"
-                    srcset="img/index/cat-slider-before-tablet(2).webp"
+                    srcset="
+                      img/index/cat-fat-tablet.webp    1x,
+                      img/index/cat-fat-tablet@2x.webp 2x
+                    "
                   />
                   <source
                     type="image/webp"
                     media="(min-width: 768px)"
                     srcset="
-                      img/index/cat-slider-before.webp    1x,
-                      img/index/cat-slider-before@2x.webp 2x
+                      img/index/cat-fat.webp    1x,
+                      img/index/cat-fat@2x.webp 2x
                     "
                   />
                   <source
                     media="(min-width: 768px)"
-                    srcset="img/index/cat-slider-before-tablet(2).png"
+                    srcset="
+                      img/index/cat-fat-tablet.png    1x,
+                      img/index/cat-fat-tablet@2x.png 2x
+                    "
                   />
                   <img
                     class="example__image image example__image--before"
-                    src="img/index/cat-slider-before.png"
+                    src="img/index/cat-fat.png"
                     width="280"
                     height="232"
                     alt="Кот, который участвовал в программе по снижению веса. Было."
-                    srcset="img/index/cat-slider-before@2x.png 2x"
+                    srcset="img/index/cat-fat.png@2x.png 2x"
                   />
                 </picture>
                 <picture>
-                  <!-- Доработать слайдер -->
                   <source
                     type="image/webp"
                     media="(min-width: 768px)"
-                    srcset="img/index/cat-slider-after-tablet(2).webp"
+                    srcset="
+                      img/index/cat-skinny-tablet.webp    1x,
+                      img/index/cat-skinny-tablet@2x.webp 2x
+                    "
                   />
                   <source
                     type="image/webp"
                     srcset="
-                      img/index/cat-slider-after.webp    1x,
-                      img/index/cat-slider-after@2x.webp 2x
+                      img/index/cat-skinny.webp    1x,
+                      img/index/cat-skinny@2x.webp 2x
                     "
                   />
                   <source
                     media="(min-width: 768px)"
-                    srcset="img/index/cat-slider-after-tablet(2).png"
+                    srcset="
+                      img/index/cat-skinny-tablet.png    1x,
+                      img/index/cat-skinny-tablet@2x.png 2x
+                    "
                   />
                   <img
                     class="example__image image example__image--after hidden"
-                    src="img/index/cat-slider-after.png"
+                    src="img/index/cat-skinny.png"
                     width="243"
                     height="232"
                     alt="Кот, который участвовал в программе по снижению веса. Стало."
-                    srcset="img/index/cat-slider-after@2x.png 2x"
+                    srcset="img/index/cat-skinny@2x.png 2x"
                   />
                 </picture>
               </div>

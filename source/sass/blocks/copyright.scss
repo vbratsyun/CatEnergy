@@ -4,6 +4,7 @@
   justify-content: space-between;
   font-size: 16px;
   color: $text-color-grey;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
     column-gap: 22px;

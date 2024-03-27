@@ -4,9 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cat Energy</title>
+    <link rel="icon" href="favicon.ico" />
+    <!-- 32×32 -->
+    <link rel="icon" href="img/icon.svg" type="image/svg+xml" />
+    <!-- 180×180 -->
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link href="css/style.min.css" rel="stylesheet" />
-    <link rel="reload" href="css/style.min.css" as="style" />
-    <link rel="reload" href="js/script.js" as="script" />
+    <link rel="preload" href="css/style.min.css" as="style" />
+    <link rel="preload" href="js/script.js" as="script" />
     <link
       rel="preload"
       href="fonts/Oswald.woff2"
@@ -16,8 +22,8 @@
     />
   </head>
 
-  <body class="page__body page-body">
-    <header class="page-body__page-header page-header page-header--index">
+  <body class="page__page-body page-body">
+    <header class="page-body__page-header page-header">
       <a class="page-header__logo wrapper" href="index.html">
         <picture>
           <source
@@ -247,8 +253,10 @@
                 />
                 <source
                   media="(min-width:768px)"
-                  srcset="img/catalog/product-4-tablet.png 1x"
-                  srcset="img/catalog/product-4-tablet@2x.png 2x"
+                  srcset="
+                    img/catalog/product-4-tablet.png    1x,
+                    img/catalog/product-4-tablet@2x.png 2x
+                  "
                 />
                 <img
                   class="products-list__image image"
@@ -443,7 +451,7 @@
           </li>
           <li class="products-list__item products-list__item--show-more">
             <span class="products-list__icon"></span>
-            <div>
+            <div class="products-list__text">
               <p class="products-list__title products-list__title--show-more">
                 Показать еще 100500 товаров
               </p>
@@ -459,7 +467,7 @@
             </button>
           </li>
         </ul>
-        <div class="wrapper">
+        <div class="wrapper wrapper--additional">
           <h3 class="products__title title products__title--additional">
             Дополнительные товары
           </h3>

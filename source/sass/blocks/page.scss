@@ -3,9 +3,12 @@
   font-family: "Arial", "Calibri", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 18px;
+}
+
+.page__page-body {
+  margin: 0;
 
   @media (min-width: $desktop-width) {
-    max-width: 1440px;
     margin: 0 auto;
   }
 }

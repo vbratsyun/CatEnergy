@@ -11,6 +11,7 @@
   display: flex;
   padding: 26px 0;
   justify-content: space-between;
+  column-gap: 10px;
 
   &--index {
     padding: 0 0 26px;
@@ -32,9 +33,9 @@
     left: 0;
     z-index: 3;
     background-color: $color-white;
-    padding: 56px 80px;
+    padding: 56px 36px;
     box-sizing: border-box;
-    width: 565px;
+    min-width: 565px;
   }
 }
 
@@ -133,8 +134,12 @@
 
 .contacts__wrapper-social-contacts {
   @media (min-width: $tablet-width) {
+    position: relative;
+    z-index: 4;
     display: flex;
     align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 }
 
@@ -161,4 +166,8 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
   }
+}
+
+.contacts__social-contacts-copyright {
+  margin-bottom: 10px;
 }

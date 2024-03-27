@@ -29,28 +29,6 @@
     @media (min-width: $tablet-width) {
       content: none;
     }
-
-    @media (min-width: $desktop-width) {
-      content: "";
-      width: 720px;
-      height: 694px;
-      background-image: linear-gradient(
-          rgba(104, 183, 56, 0.85),
-          rgba(104, 183, 56, 0.85)
-        ),
-        url("../../img/index/promo-background-image-desktop.jpg");
-      top: -207px;
-      right: 0;
-      left: auto;
-
-      @media (min-resolution: 2dppx) {
-        background-image: linear-gradient(
-            rgba(104, 183, 56, 0.85),
-            rgba(104, 183, 56, 0.85)
-          ),
-          url("../../img/index/promo-background-image-desktop@2x.jpg");
-      }
-    }
   }
 
   &::before {
@@ -93,6 +71,7 @@
       top: -230px;
       right: 330px;
       left: auto;
+      z-index: 2;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/index/promo-image-desktop@2x.png");
@@ -133,13 +112,14 @@
   font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
   line-height: 36px;
   text-transform: uppercase;
-  padding: 0 0 302px;
+  min-height: 302px;
   color: $color-white;
 
   @media (min-width: $tablet-width) {
     font-weight: bold;
     text-align: left;
     color: $color-black;
+    min-height: auto;
     margin: 0 87px 49px;
     padding: 0;
   }
@@ -152,6 +132,7 @@
 
 .promo__link {
   padding: 8px 24px;
+  margin-bottom: 5px;
 
   @media (min-width: $tablet-width) {
     width: 33.5%;

@@ -1,7 +1,12 @@
 .nav-list {
   @media (min-width: $tablet-width) {
     display: flex;
-    column-gap: 36px;
+    gap: 20px 36px;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 478px;
   }
 }
 

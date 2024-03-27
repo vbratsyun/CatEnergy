@@ -1,21 +1,47 @@
 .page-header {
-  &--index {
-    display: flex;
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     margin-right: 30px;
-
-    &--index {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
     margin-right: 110px;
+
+    &--index {
+      margin: 0 0 111px;
+      padding: 53px 110px 0 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 720px;
+        height: 694px;
+        background-image: linear-gradient(
+            rgba(104, 183, 56, 0.85),
+            rgba(104, 183, 56, 0.85)
+          ),
+          url("../../img/index/promo-background-image-desktop.jpg");
+        top: 0;
+        right: 0;
+        left: auto;
+        background-size: cover;
+        min-height: 100%;
+
+        @media (min-resolution: 2dppx) {
+          background-image: linear-gradient(
+              rgba(104, 183, 56, 0.85),
+              rgba(104, 183, 56, 0.85)
+            ),
+            url("../../img/index/promo-background-image-desktop@2x.jpg");
+        }
+      }
+    }
   }
 }
 
