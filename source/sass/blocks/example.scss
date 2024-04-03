@@ -1,6 +1,6 @@
 .example {
   background-color: $background-color;
-  padding: 25px 0 40px;
+  padding: 25px 0 44px;
 
   @media (min-width: $tablet-width) {
     position: relative;
@@ -14,9 +14,15 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 462px;
+      height: 461px;
       background-color: #eaeaea;
       z-index: -1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      height: 445px;
     }
   }
 }
@@ -25,19 +31,19 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 193px;
+    column-gap: 120px;
   }
 }
 
 .example__title {
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 63px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 146px;
+    margin-bottom: 147px;
     grid-column: 1/2;
   }
 }
@@ -54,14 +60,14 @@
   margin: 0 0 20px;
 
   @media (min-width: $tablet-width) {
-    width: 95%;
+    width: 96%;
     font-size: 16px;
     line-height: 24px;
     margin: 0 0 54px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 100%;
+    width: 439px;
     margin: 0 0 69px;
   }
 }
@@ -73,13 +79,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 99px;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: column;
     row-gap: 55px;
-    width: 84%;
+    width: 366px;
     margin-bottom: 75px;
   }
 }
@@ -87,7 +93,7 @@
 .example__list {
   display: flex;
   column-gap: 32px;
-  margin: 0 auto 20px;
+  margin: 0 auto 34px;
   flex-wrap: wrap;
   max-width: 366px;
   row-gap: 10px;
@@ -106,7 +112,7 @@
 .example__list-wrapper {
   position: relative;
   width: 82px;
-  padding: 14px 21px;
+  padding: 15px 21px 17px;
   text-align: center;
   z-index: 1;
   margin: 0 auto;
@@ -140,19 +146,19 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 600;
-  margin-bottom: 8px;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 37px;
-    margin-bottom: 11px;
+    margin-bottom: 20px;
   }
 }
 
 .example__value {
   position: absolute;
   left: 50%;
-  bottom: -10px;
+  bottom: -14px;
   transform: translateX(-50%);
   width: min-content;
   margin: 0;
@@ -189,7 +195,7 @@
   @media (min-width: $tablet-width) {
     width: 184px;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 1.5;
     text-align: right;
     margin-bottom: 0;
   }
@@ -215,36 +221,61 @@
 
 .example__slider {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 19px;
   height: 232px;
 
   @media (min-width: $tablet-width) {
-    height: 511px;
+    min-height: 511px;
+    margin-bottom: 15px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 25px;
+    width: 582px;
+    min-height: 497px;
+    margin-bottom: 0;
   }
 }
 
 .example__image {
+  position: relative;
+  top: -10px;
+  object-fit: cover;
   margin: 0 auto;
 
   &--before {
     width: 280px;
-    height: 232px;
+    height: 242px;
+
+    @media (min-width: $tablet-width) {
+      width: 592px;
+      height: 501px;
+      top: -16px;
+      left: 31px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -44px;
+      left: 26px;
+    }
   }
 
   &--after {
     width: 243px;
     height: 232px;
-  }
 
-  &--before,
-  &--after {
     @media (min-width: $tablet-width) {
       width: 592px;
-      height: 511px;
+      height: 513px;
+      top: -15px;
+      left: 30px;
+      object-fit: contain;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -44px;
+      left: 26px;
+      height: 512px;
+      object-fit: contain;
     }
   }
 }
@@ -254,13 +285,17 @@
   align-items: center;
   column-gap: 13px;
   justify-content: space-around;
-  width: 209px;
+  width: 200px;
   margin: 0 auto;
   flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
-    width: 592px;
-    padding-bottom: 56px;
+    width: 575px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
   }
 }
 
@@ -270,6 +305,7 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: 600;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   background-color: transparent;
   border: 1px solid transparent;

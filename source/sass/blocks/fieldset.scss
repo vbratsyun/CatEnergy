@@ -2,7 +2,15 @@
   position: relative;
   border: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 24px;
+
+  &--contacts {
+    margin: 0 0 27px;
+  }
+
+  &--comments {
+    margin: 0 0 19px;
+  }
 
   &--radio {
     &::before {
@@ -32,7 +40,24 @@
     }
   }
 
+  @media (min-width: $tablet-width) {
+    margin: 0 0 75px;
+
+    &--contacts {
+      margin: 0 0 63px;
+    }
+
+    &--comments {
+      margin: 0 0 61px;
+    }
+
+    &--additionally {
+      margin: 0 0 54px;
+    }
+  }
+
   @media (min-width: $desktop-width) {
+    margin: 0;
     &--contacts,
     &--comments,
     &--additionally {
@@ -47,32 +72,44 @@
   line-height: 26px;
   font-weight: bold;
   width: 65%;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
+  letter-spacing: 0.5px;
 
   &::after {
     content: "";
     position: absolute;
-    top: 18px;
+    top: 15px;
     right: 0;
     width: 99px;
     height: 2px;
     background-color: $color-button;
   }
 
-  &--comments::after {
-    content: "";
-    width: 158px;
+  &--comments {
+    margin-bottom: 37px;
+
+    &::after {
+      content: "";
+      width: 158px;
+    }
   }
 
-  &--additionally::after {
-    content: "";
-    width: 136px;
+  &--additionally {
+    // position: relative;
+    // top: -5px;
+    margin-bottom: 36px;
+    &::after {
+      content: "";
+      width: 136px;
+    }
   }
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 76px;
+    width: 69%;
+    letter-spacing: 0.9px;
 
     &::after {
       content: "";
@@ -93,13 +130,17 @@
       background-color: $color-button;
     }
 
-    &--comments::after {
-      content: "";
-      width: 478px;
+    &--comments {
+      margin-bottom: 79px;
+
+      &::after {
+        content: "";
+        width: 478px;
+      }
     }
 
     &--additionally {
-      margin-bottom: 57px;
+      margin-bottom: 59px;
     }
 
     &--additionally::after {
@@ -109,6 +150,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 81px;
+
     &::after {
       content: "";
       top: 25px;
@@ -126,9 +169,12 @@
       width: 1108px;
     }
 
-    &--additionally::after {
-      content: "";
-      width: 1078px;
+    &--additionally {
+      margin-bottom: 58px;
+      &::after {
+        content: "";
+        width: 1078px;
+      }
     }
   }
 }
@@ -136,7 +182,7 @@
 .fieldset__list {
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
+  row-gap: 13px;
   padding: 22px 0;
 
   &--checkbox {
@@ -151,7 +197,7 @@
     &--checkbox {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 37px 124px;
+      gap: 31px 57px;
       border: none;
       padding: 0;
     }
@@ -160,7 +206,7 @@
   @media (min-width: $desktop-width) {
     &--checkbox {
       grid-template-columns: repeat(4, 1fr);
-      column-gap: 104px;
+      column-gap: 81px;
     }
   }
 }
@@ -168,13 +214,14 @@
 .fieldset__wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 13px;
+  row-gap: 15px;
 
   @media (min-width: $tablet-width) {
     row-gap: 20px;
   }
 
   @media (min-width: $desktop-width) {
+    row-gap: 22px;
     &--contacts {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -188,12 +235,16 @@
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  column-gap: 13px;
+  column-gap: 15px;
   // flex-wrap: wrap;
 
   // @media (min-width: $desktop-width) {
   //   flex-wrap: nowrap;
   // }
+
+  &--contacts {
+    column-gap: 11px;
+  }
 }
 
 .fieldset__label {
@@ -202,18 +253,41 @@
   text-transform: uppercase;
   font-weight: bold;
   color: $text-color-grey;
+  letter-spacing: 1.1px;
 
   &--radio {
-    margin-left: 50px;
+    margin-left: 46px;
   }
 
   &--checkbox {
     margin-left: 46px;
+    margin-top: -6px;
   }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    letter-spacing: 0.4px;
+
+    &--name {
+      min-width: 49px;
+    }
+
+    &--weight {
+      min-width: 80px;
+    }
+
+    &--years {
+      min-width: 120px;
+    }
+
+    &--email {
+      min-width: 71px;
+    }
+
+    &--tel {
+      min-width: 86px;
+    }
 
     &--radio {
       margin-left: 60px;
@@ -229,13 +303,26 @@
   width: 100%;
   min-width: 163px;
   box-sizing: border-box;
-  padding: 13px 50px 13px 14px;
+  padding: 12px 50px 12px 14px;
   border: none;
   outline: 1px solid $input-outline;
   font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   color: $text-color-grey;
+
+  &--email,
+  &--tel {
+    padding-top: 11px;
+  }
+
+  &--email {
+    letter-spacing: 1.7px;
+  }
+
+  &--tel {
+    letter-spacing: 1.3px;
+  }
 
   &:hover {
     outline-color: $input-outline-hover;
@@ -253,10 +340,17 @@
     font-size: 20px;
     line-height: 30px;
     min-width: 350px;
+    padding: 9px 50px 12px 18px;
+
+    &--email,
+    &--tel {
+      padding: 11px 50px 12px 21px;
+      letter-spacing: 0.4px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 10px 50px 11px 14px;
+    padding: 9px 50px 11px 21px;
   }
 }
 
@@ -320,11 +414,15 @@
         height: 18px;
       }
     }
+
+    @media (min-width: $desktop-width) {
+      top: 1px;
+    }
   }
 
   &--checkbox {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     outline: 1px solid $border-color;
 
     &::before {
@@ -343,8 +441,8 @@
     }
 
     @media (min-width: $tablet-width) {
-      width: 40px;
-      height: 40px;
+      width: 39px;
+      height: 39px;
 
       &::before {
         width: 24px;
@@ -363,6 +461,26 @@
   position: absolute;
   top: 20px;
   right: 16px;
+
+  &--email {
+    top: 15px;
+  }
+
+  &--tel {
+    top: 13px;
+    right: 12px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--email {
+      top: 19px;
+    }
+
+    &--tel {
+      top: 14px;
+      right: 16px;
+    }
+  }
 }
 
 .fieldset__textarea {
@@ -376,12 +494,19 @@
   text-transform: uppercase;
   font-weight: bold;
   color: $text-color-grey;
-  padding: 9px 12px;
+  padding: 9px 15px;
+  letter-spacing: 0.2px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    height: 174px;
+    height: 171px;
+    letter-spacing: 0.4px;
+    padding: 9px 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 172px;
   }
 }
 

@@ -11,7 +11,7 @@
 }
 
 .page-main__programs {
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 45px;
@@ -24,10 +24,10 @@
 
 .page-main__process {
   position: relative;
-  margin-bottom: 49px;
+  margin-bottom: 33px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 90px;
+    margin-bottom: 86px;
 
     &::after {
       content: "";
@@ -41,7 +41,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 69px;
+    margin-bottom: 64px;
 
     &::after {
       content: none;

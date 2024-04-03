@@ -5,11 +5,15 @@
     position: relative;
   }
 
+  &--slider {
+    margin: 0;
+  }
+
   @media (min-width: $tablet-width) {
     margin: 0 30px;
 
     &--form {
-      padding: 0 39px;
+      padding: 0 37px 0 41px;
     }
   }
 

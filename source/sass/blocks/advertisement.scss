@@ -75,6 +75,7 @@
   background-repeat: no-repeat;
   position: relative;
   top: 58px;
+  left: -4px;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
@@ -83,7 +84,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 auto 59px;
+    margin: 0 auto 40px;
   }
 }
 
@@ -94,7 +95,7 @@
   text-align: center;
   width: 65%;
   margin: 0 auto;
-  margin-top: 107px;
+  margin-top: 98px;
   padding: 10px;
   box-sizing: border-box;
 
