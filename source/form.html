@@ -24,7 +24,9 @@
   </head>
 
   <body class="page__page-body page-body">
-    <header class="page-body__page-header page-header">
+    <header
+      class="page-body__page-header page-header page-body__page-header--form"
+    >
       <a class="page-header__logo wrapper" href="index.html">
         <picture>
           <source
@@ -89,7 +91,9 @@
             class="fieldset__wrapper wrapper wrapper--form wrapper--form-personality"
           >
             <div class="fieldset__container">
-              <label class="fieldset__label" for="name">Имя:*</label>
+              <label class="fieldset__label fieldset__label--name" for="name"
+                >Имя:*</label
+              >
               <input
                 class="fieldset__input"
                 id="name"
@@ -100,7 +104,11 @@
               />
             </div>
             <div class="fieldset__container">
-              <label class="fieldset__label" for="weight">Вес (кг):*</label>
+              <label
+                class="fieldset__label fieldset__label--weight"
+                for="weight"
+                >Вес (кг):*</label
+              >
               <input
                 class="fieldset__input"
                 id="weight"
@@ -111,7 +119,9 @@
               />
             </div>
             <div class="fieldset__container">
-              <label class="fieldset__label" for="years">Возраст (лет):</label>
+              <label class="fieldset__label fieldset__label--years" for="years"
+                >Возраст (лет):</label
+              >
               <input
                 class="fieldset__input"
                 id="years"
@@ -178,18 +188,22 @@
           </legend>
           <div class="wrapper wrapper--form">
             <div class="fieldset__wrapper fieldset__wrapper--contacts">
-              <div class="fieldset__container">
-                <label class="fieldset__label" for="email">E-mail:*</label>
+              <div class="fieldset__container fieldset__container--contacts">
+                <label
+                  class="fieldset__label fieldset__label--email"
+                  for="email"
+                  >E-mail:*</label
+                >
                 <div class="fieldset__inner">
                   <input
-                    class="fieldset__input"
+                    class="fieldset__input fieldset__input--email"
                     id="email"
                     type="email"
                     placeholder="kuklachev@gmail.com"
                     autocomplete="on"
                     required
                   />
-                  <span class="fieldset__icon">
+                  <span class="fieldset__icon fieldset__icon--email">
                     <svg
                       class="fieldset__icon-email"
                       width="19"
@@ -232,18 +246,20 @@
                   </span>
                 </div>
               </div>
-              <div class="fieldset__container">
-                <label class="fieldset__label" for="tel">Телефон:*</label>
+              <div class="fieldset__container fieldset__container--contacts">
+                <label class="fieldset__label fieldset__label--tel" for="tel"
+                  >Телефон:*</label
+                >
                 <div class="fieldset__inner">
                   <input
-                    class="fieldset__input"
+                    class="fieldset__input fieldset__input--tel"
                     id="tel"
                     type="tel"
                     placeholder="8 (960) 900-60-90"
                     autocomplete="on"
                     required
                   />
-                  <span class="fieldset__icon">
+                  <span class="fieldset__icon fieldset__icon--tel">
                     <svg
                       class="fieldset__icon-tel"
                       width="20"
@@ -434,7 +450,7 @@
             />
           </picture>
         </div>
-        <div class="contacts__social-contacts">
+        <div class="contacts__social-contacts contacts__social-contacts--form">
           <div class="contacts__wrapper-social-contacts wrapper">
             <a class="contacts__social-contacts-link" href="index.html#header">
               <img

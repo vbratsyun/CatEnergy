@@ -1,8 +1,9 @@
 .page-form__title {
-  margin: 27px 0 37px;
+  margin: 27px 0 39px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 54px;
+    margin: 0 0 55px;
+    letter-spacing: 1.5px;
   }
 
   @media (min-width: $desktop-width) {
@@ -22,10 +23,12 @@
     font-size: 20px;
     line-height: 30px;
     max-width: 60%;
-    margin-bottom: 66px;
+    margin-bottom: 68px;
+    letter-spacing: 0.3px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 323px;
+    margin-bottom: 66px;
   }
 }

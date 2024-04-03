@@ -23,7 +23,9 @@
   </head>
 
   <body class="page__page-body page-body">
-    <header class="page-body__page-header page-header">
+    <header
+      class="page-body__page-header page-header page-body__page-header--catalog"
+    >
       <a class="page-header__logo wrapper" href="index.html">
         <picture>
           <source
@@ -458,13 +460,13 @@
               <p class="products-list__description">
                 На самом деле вкусов гораздо больше!
               </p>
+              <button
+                class="products-list__button products-list__button--loading button button--loading"
+                type="button"
+              >
+                Показать все
+              </button>
             </div>
-            <button
-              class="products-list__button products-list__button--loading button button--loading"
-              type="button"
-            >
-              Показать все
-            </button>
           </li>
         </ul>
         <div class="wrapper wrapper--additional">
@@ -615,7 +617,9 @@
             />
           </picture>
         </div>
-        <div class="contacts__social-contacts">
+        <div
+          class="contacts__social-contacts contacts__social-contacts--catalog"
+        >
           <div class="contacts__wrapper-social-contacts wrapper">
             <a class="contacts__social-contacts-link" href="index.html#header">
               <img

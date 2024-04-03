@@ -16,27 +16,29 @@
 
 .programs__item {
   background-color: $background-color;
-  padding: 20px;
+  padding: 29px 20px 22px;
   display: grid;
   grid-template-columns: 50px 1fr;
   column-gap: 19px;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 1fr 296px;
-    column-gap: 20px;
+    grid-template-columns: 1fr 223px;
+    column-gap: 37px;
     padding: 77px 52px 57px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 100px 1fr;
-    column-gap: 62px;
+    gap: 41px 63px;
     align-items: center;
-    padding: 55px 52px 41px;
+    padding: 46px 52px 58px;
   }
 }
 
 .programs__icon {
   position: relative;
+  top: -7px;
+  left: 2px;
   display: block;
   width: 50px;
   height: 50px;
@@ -53,17 +55,19 @@
     background-size: contain;
     background-repeat: no-repeat;
     left: 50%;
-    top: 50%;
+    top: 45%;
     transform: translate(-50%, -50%);
 
     @media (min-width: $tablet-width) {
       width: 140px;
       height: 194px;
+      top: 43%;
     }
 
     @media (min-width: $desktop-width) {
       width: 70px;
       height: 97px;
+      top: 45%;
     }
   }
 
@@ -96,6 +100,7 @@
     align-self: center;
     width: 200px;
     height: 200px;
+    top: -2px;
   }
 
   @media (min-width: $desktop-width) {
@@ -104,7 +109,9 @@
     align-self: center;
     width: 100px;
     height: 100px;
-    margin-bottom: 23px;
+    top: 0;
+    left: -1px;
+    // margin-bottom: 23px;
   }
 }
 
@@ -113,6 +120,7 @@
   line-height: 37px;
   margin: 0;
   margin-bottom: 30px;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
@@ -128,14 +136,14 @@
 
 .programs__description {
   position: relative;
-  margin: 0 0 38px;
+  margin: 0 0 41px;
   color: $text-color-grey;
   grid-column: 1/-1;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: -23px;
+    bottom: -22px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -150,12 +158,12 @@
     grid-column: 1/2;
     font-size: 16px;
     line-height: 24px;
-    margin: 0 0 48px;
+    margin: 0 0 53px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 1/-1;
-    margin: 0 0 23px;
+    margin: 0 0 -14px;
   }
 }
 
@@ -177,11 +185,11 @@
     transform: translateY(-50%);
     width: 24px;
     height: 12px;
-    left: 93px;
+    left: 100px;
     background-image: url("../../img/index/arrow-icon.svg");
 
     @media (min-width: $tablet-width) {
-      margin-left: 25px;
+      margin-left: 31px;
       max-width: 119px;
     }
 

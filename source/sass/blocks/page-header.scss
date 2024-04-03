@@ -4,18 +4,20 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    margin-right: 30px;
+    // margin-right: 40px;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
+    column-gap: 64px;
   }
 
   @media (min-width: $desktop-width) {
     margin-right: 110px;
+    justify-content: space-between;
 
     &--index {
-      margin: 0 0 111px;
-      padding: 53px 110px 0 0;
+      margin: 0 0 95px;
+      padding: 43px 110px 0 0;
 
       &::after {
         content: "";
