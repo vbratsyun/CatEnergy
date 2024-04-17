@@ -35,14 +35,7 @@ const onButtonClick = (event) => {
   }
 }
 
-buttons.forEach((button) => button.addEventListener('click', onButtonClick));
-
-
-
-
-
-
-example.addEventListener("click", onExampleClick);
+buttons.forEach((button) => button.addEventListener("click", onButtonClick));
 
 const processNumbers = document.querySelectorAll(".process__number");
 processNumbers.forEach((num, index) => {
