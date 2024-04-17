@@ -11,7 +11,7 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: 10px;
       left: 0;
       width: 100%;
       height: 461px;
@@ -22,6 +22,7 @@
 
   @media (min-width: $desktop-width) {
     &::after {
+      bottom: 17px;
       height: 445px;
     }
   }
@@ -86,7 +87,7 @@
     flex-direction: column;
     row-gap: 55px;
     width: 366px;
-    margin-bottom: 75px;
+    margin-bottom: 69px;
   }
 }
 
@@ -226,12 +227,12 @@
 
   @media (min-width: $tablet-width) {
     min-height: 511px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
 
   @media (min-width: $desktop-width) {
     width: 582px;
-    min-height: 497px;
+    min-height: 487px;
     margin-bottom: 0;
   }
 }
@@ -283,7 +284,7 @@
 .example__before-after {
   display: flex;
   align-items: center;
-  column-gap: 13px;
+  gap: 13px;
   justify-content: space-around;
   width: 200px;
   margin: 0 auto;
@@ -322,7 +323,8 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 29px;
-    border-bottom: 1px dotted $border-color;
+    margin: 10px 0;
+    border-bottom: 1px dotted #cdcdcd;
   }
 
   &:hover {
@@ -334,69 +336,60 @@
   }
 }
 
-.example__range-scale {
-  position: relative;
-  min-width: 86px;
+.example__range-scale-control {
+  order: 2;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 86px;
   height: 14px;
   border: 1px solid $border-color;
   border-radius: 10px;
   background-color: $color-white;
-  order: 2;
+  box-sizing: border-box;
+  padding: 4px 6px;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 36px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: $color-button;
+  }
+
+  &::-webkit-range-thumb {
+    -moz-appearance: none;
+    width: 36px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: $color-button;
+  }
 
   @media (min-width: $tablet-width) {
     width: 426px;
     height: 6px;
+    padding: 0;
     background-color: $border-color;
-    border-radius: 6px;
-  }
-}
 
-.example__range-scale-control {
-  margin: 4px 6px;
-  width: 36px;
-  height: 6px;
-  border-radius: 10px;
-  background-color: $color-button;
-
-  @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    width: 36px;
-    height: 36px;
-    border: 1px solid $border-color;
-    border-radius: 50%;
-    background-color: $color-white;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: auto;
-      width: 8px;
-      height: 8px;
+    &::-webkit-slider-thumb {
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
       background-color: $color-button;
+      border: 13px solid $color-white;
+      outline: 1px solid $border-color;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
     }
-  }
-}
 
-.example__range-scale-control--after {
-  position: absolute;
-  right: 0;
-
-  @media (min-width: $tablet-width) {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: auto;
-    margin: auto;
+    &::-webkit-range-thumb {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: $color-button;
+      border: 13px solid $color-white;
+      outline: 1px solid $border-color;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+    }
   }
 }
 
@@ -404,14 +397,26 @@
   display: none;
 }
 
-.example__button:hover ~ .example__range-scale .example__range-scale-control {
+.example__button:hover ~ .example__range-scale-control::-webkit-slider-thumb {
   @media (min-width: $tablet-width) {
     box-shadow: 0 1px 3px 2px $border-color;
   }
 }
 
-.example__button:active ~ .example__range-scale .example__range-scale-control {
+.example__button:hover ~ .example__range-scale-control::-moz-range-thumb {
   @media (min-width: $tablet-width) {
-    border: 1px solid $color-button;
+    box-shadow: 0 1px 3px 2px $border-color;
+  }
+}
+
+.example__button:active ~ .example__range-scale-control::-webkit-slider-thumb {
+  @media (min-width: $tablet-width) {
+    outline: 1px solid $color-button;
+  }
+}
+
+.example__button:active ~ .example__range-scale-control::-moz-slider-thumb {
+  @media (min-width: $tablet-width) {
+    outline: 1px solid $color-button;
   }
 }

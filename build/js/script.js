@@ -1,8 +1,10 @@
 const navMain = document.querySelector(".page-nav");
 const navToggle = document.querySelector(".page-nav__toggle");
-const example = document.querySelector(".example__before-after");
 const exampleSlider = document.querySelector(".example__slider");
-const exampleControl = document.querySelector(".example__range-scale-control");
+const example = document.querySelector(".example__before-after");
+const buttons = example.querySelectorAll('.example__button');
+const exampleControl = example.querySelector(".example__range-scale-control");
+
 
 navMain.classList.remove("page-nav--nojs");
 
@@ -18,21 +20,27 @@ const onNavToggleClick = () => {
 
 navToggle.addEventListener("click", onNavToggleClick);
 
-
-const onExampleClick = (event) => {
+const onButtonClick = (event) => {
   const imageAfter = exampleSlider.querySelector(".example__image--after");
   const imageBefore = exampleSlider.querySelector(".example__image--before");
 
   if (event.target.matches(".example__button--after")) {
     imageAfter.classList.remove("hidden");
     imageBefore.classList.add("hidden");
-    exampleControl.classList.add("example__range-scale-control--after");
+    exampleControl.setAttribute("value", "2");
   } else {
     imageAfter.classList.add("hidden");
     imageBefore.classList.remove("hidden");
-    exampleControl.classList.remove("example__range-scale-control--after");
+    exampleControl.setAttribute("value", "1");
   }
-};
+}
+
+buttons.forEach((button) => button.addEventListener('click', onButtonClick));
+
+
+
+
+
 
 example.addEventListener("click", onExampleClick);
 
