@@ -228,14 +228,15 @@
   }
 
   &--loading {
+    width: 100%;
     color: $text-color-grey;
     font-weight: 600;
     padding: 7px 96px;
-    margin: 0 10px;
+
 
     @media (min-width: $tablet-width) {
       width: 247px;
-      padding: 7px 44px;
+      padding: 8px 44px;
     }
 
     @media (min-width: $desktop-width) {
@@ -247,7 +248,7 @@
 
 .products-list__icon {
   display: block;
-  background: url("../../img/catalog/icon-plus.svg") no-repeat;
+  background: url("../img/catalog/icon-plus.svg") no-repeat;
   width: 30px;
   height: 30px;
   margin: 5px auto 9px;
@@ -266,8 +267,8 @@
 }
 
 .products-list__text {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-bottom: 7px;
 }
 

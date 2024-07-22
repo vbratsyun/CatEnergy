@@ -51,7 +51,7 @@
     position: absolute;
     width: 36px;
     height: 50px;
-    background: url("../../img/index/cat-slim-icon.svg");
+    background: url("../img/index/cat-slim-icon.svg");
     background-size: contain;
     background-repeat: no-repeat;
     left: 50%;
@@ -76,7 +76,7 @@
     position: absolute;
     width: 68px;
     height: 28px;
-    background: url("../../img/index/cat-pro-icon.svg");
+    background: url("../img/index/cat-pro-icon.svg");
     background-size: contain;
     background-repeat: no-repeat;
     left: 50%;
@@ -111,7 +111,6 @@
     height: 100px;
     top: 0;
     left: -1px;
-    // margin-bottom: 23px;
   }
 }
 
@@ -186,7 +185,7 @@
     width: 24px;
     height: 12px;
     left: 100px;
-    background-image: url("../../img/index/arrow-icon.svg");
+    background-image: url("../img/index/arrow-icon.svg");
 
     @media (min-width: $tablet-width) {
       margin-left: 31px;
@@ -201,7 +200,7 @@
   &:hover::after {
     content: "";
     width: 32px;
-    background-image: url("../../img/index/arrow-icon-hover.svg");
+    background-image: url("../img/index/arrow-icon-hover.svg");
   }
 
   &:active {

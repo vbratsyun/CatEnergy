@@ -4,10 +4,8 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    // margin-right: 40px;
     flex-direction: row;
     align-items: center;
-    // justify-content: space-between;
     column-gap: 64px;
   }
 
@@ -28,7 +26,7 @@
             rgba(104, 183, 56, 0.85),
             rgba(104, 183, 56, 0.85)
           ),
-          url("../../img/index/promo-background-image-desktop.jpg");
+          url("../img/index/promo-background-image-desktop.jpg");
         top: 0;
         right: 0;
         left: auto;
@@ -40,7 +38,7 @@
               rgba(104, 183, 56, 0.85),
               rgba(104, 183, 56, 0.85)
             ),
-            url("../../img/index/promo-background-image-desktop@2x.jpg");
+            url("../img/index/promo-background-image-desktop@2x.jpg");
         }
       }
     }
@@ -50,6 +48,7 @@
 .page-header__logo {
   padding: 10px 0 17px;
   cursor: pointer;
+  width: 191px;
 
   &:hover {
     opacity: 0.8;

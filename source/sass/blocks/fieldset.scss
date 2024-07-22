@@ -95,8 +95,6 @@
   }
 
   &--additionally {
-    // position: relative;
-    // top: -5px;
     margin-bottom: 36px;
     &::after {
       content: "";
@@ -231,16 +229,10 @@
 }
 
 .fieldset__container {
-  // display: flex;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   column-gap: 15px;
-  // flex-wrap: wrap;
-
-  // @media (min-width: $desktop-width) {
-  //   flex-wrap: nowrap;
-  // }
 
   &--contacts {
     column-gap: 11px;
@@ -436,7 +428,7 @@
       margin: auto;
       width: 18px;
       height: 14px;
-      background: url("../../img/form/arrow.svg") no-repeat;
+      background: url("../img/form/arrow.svg") no-repeat;
       background-size: cover;
     }
 
