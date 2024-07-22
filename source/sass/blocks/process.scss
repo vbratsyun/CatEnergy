@@ -77,25 +77,25 @@
   &--leaf::before {
     width: 31px;
     height: 32px;
-    background: url("../../img/index/leaf-icon.svg") no-repeat;
+    background: url("../img/index/leaf-icon.svg") no-repeat;
   }
 
   &--tub::before {
     width: 30px;
     height: 31px;
-    background: url("../../img/index/tub-icon.svg") no-repeat;
+    background: url("../img/index/tub-icon.svg") no-repeat;
   }
 
   &--eat::before {
     width: 26px;
     height: 30px;
-    background: url("../../img/index/eat-icon.svg") no-repeat;
+    background: url("../img/index/eat-icon.svg") no-repeat;
   }
 
   &--alarm::before {
     width: 33px;
     height: 33px;
-    background: url("../../img/index/alarm-icon.svg") no-repeat;
+    background: url("../img/index/alarm-icon.svg") no-repeat;
   }
 
   @media (min-width: $tablet-width) {
