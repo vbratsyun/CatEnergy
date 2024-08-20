@@ -338,8 +338,6 @@
 
 .example__range-scale-control {
   order: 2;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   width: 86px;
   height: 14px;
@@ -350,7 +348,6 @@
   padding: 4px 6px;
 
   &::-webkit-slider-thumb {
-    -webkit-appearance: none;
     width: 36px;
     height: 6px;
     border-radius: 10px;
@@ -358,7 +355,6 @@
   }
 
   &::-webkit-range-thumb {
-    -moz-appearance: none;
     width: 36px;
     height: 6px;
     border-radius: 10px;

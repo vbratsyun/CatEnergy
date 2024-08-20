@@ -30,7 +30,6 @@
       content: "";
       position: absolute;
       bottom: 0;
-      // width: 100%;
       height: 1px;
       background-color: $border-color;
 
@@ -58,6 +57,7 @@
 
   @media (min-width: $desktop-width) {
     margin: 0;
+
     &--contacts,
     &--comments,
     &--additionally {
@@ -96,6 +96,7 @@
 
   &--additionally {
     margin-bottom: 36px;
+
     &::after {
       content: "";
       width: 136px;
@@ -169,6 +170,7 @@
 
     &--additionally {
       margin-bottom: 58px;
+
       &::after {
         content: "";
         width: 1078px;
@@ -220,6 +222,7 @@
 
   @media (min-width: $desktop-width) {
     row-gap: 22px;
+
     &--contacts {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
