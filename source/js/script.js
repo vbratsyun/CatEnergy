@@ -15,6 +15,3 @@ const onNavToggleClick = () => {
 };
 
 navToggle.addEventListener("click", onNavToggleClick);
-
-
-
